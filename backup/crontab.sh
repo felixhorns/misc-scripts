@@ -34,6 +34,6 @@
 30 2 * * * /home/felix/backup_scripts/rsync_mirror_scratch.sh > /home/felix/backup_scripts/log/rsync_mirror_scratch.log 2>&1
 0 3 * * * /home/felix/backup_scripts/borg_archive_fig.sh 2>&1 | tee /home/felix/backup_scripts/log/borg_archive_fig-$(date +\%Y-\%m-\%d).log
 30 3 * * * /home/felix/backup_scripts/borg_archive_scratch.sh 2>&1 | tee /home/felix/backup_scripts/log/borg_archive_scratch-$(date +\%Y-\%m-\%d).log
-30 4 * * 0 /home/felix/backup_scripts/rclone_snapshots_box.sh
+30 4 * * 0 /home/felix/backup_scripts/rclone_snapshots_box.sh > /home/felix/backup_scripts/log/rclone_snapshots_box.log 2>&1
 30 4 * * 1 /home/felix/backup_scripts/borg_check_fig.sh > /home/felix/backup_scripts/log/borg_check_fig.log 2>&1
 0 5 * * 1 /home/felix/backup_scripts/borg_check_scratch.sh > /home/felix/backup_scripts/log/borg_check_scratch.log 2>&1
